@@ -11,7 +11,7 @@ const Login = () => {
     // Placeholder login logic - no backend integration
     if (email && password) {
       // In a real app, this would validate credentials with the backend
-      console.log('Login attempt with:', { email, password });
+      console.log('Login attempt with email:', email);
       navigate('/dashboard');
     }
   };
