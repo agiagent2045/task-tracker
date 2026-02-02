@@ -6,8 +6,10 @@ const { errorHandler, notFound } = require('./middlewares/errorMiddleware');
 // Load environment variables
 dotenv.config();
 
-// Connect to database
-connectDB();
+// Connect to database (non-blocking)
+connectDB().catch(err => {
+  console.error('Database connection failed:', err.message);
+});
 
 const app = express();
 
